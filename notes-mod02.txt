@@ -1,0 +1,96 @@
+//Primeiros passos
+
+//Configurar projeto
+yarn init -y
+
+//Add Express
+yarn add express
+
+//Criar uma nova pasta chamada src
+É a pasta onde estará o código utilizável
+
+//Criar três arquivos:
+app.js  >> configurações express
+routes.js  >> rotas
+server.js >> servidor/listen
+
+//Sucrase para utilizar a nova sintaxe de Importação
+//Nodemon para o server atualizar quando houver alterações
+yarn add sucrase nodemon -D
+
+//Adicionar o nodemon no scripts do package.json
+"scripts": {
+    "dev": "nodemon src/server.js"
+  }
+  
+ //Criar novo arquivo na raiz nodemon.json
+ 
+ //Adicionar script para debug com sucrase
+ "dev:debug" : "nodemon --inspect src/server.js"
+ 
+ //Rodar o yarn dev:debug
+ //Ir até o debug e ativar a opção de Node.js
+ //Na configuração alterar
+"type": "node",
+      "request": "attach",
+      "name": "Launch Program",
+      "restart": true,
+      "protocol":"inspector"
+      
+ //Instalar Docker e PostBird no computador
+ 
+ ########## Ferramentas para padronização de código
+ //Instalar ESLint no VsCode
+ //Instalar eslint no projeto
+ yarn add eslint
+ //Inicializar eslint e responder as perguntas
+ yarn eslint --init
+ //Excluir arquivo package.json criado pelo npm
+ //Rodar o comando yarn para instalar as dependencias do ESLINT pelo yarn
+ yarn
+ 
+ //Editar configurações no arquivo .eslintrc.js
+ 
+ //Instalar Prettier com seus plugins do ESLINT
+ yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+ 
+ //Alterar algumas configurações no arquivo eslintrc.js
+ 
+ //Criar o arquivo .prettierrc para sobrescrever configurações padrão
+ 
+ 
+ ####################### Organização das pastas
+ 
+ //Novas pastas em SRC
+  - app
+  - config
+  - database
+ //Novas pastas em app
+  - models
+  - controllers
+ // Nova pasta em database
+  - migrations
+ //Novo arquivo em config
+  - database.js
+ 
+ ##################### SEQUELIZE
+ 
+ //Instalar dependencia
+ yarn add sequelize
+ yarn add sequelize-cli -D 
+ //criar arquivo .sequelizerc e configurá-lo
+ // configurar o arquivo database.js dentro de src/config
+ // para dialect 'postgres' instalar suas dependencias
+ yarn add pg pg-hstore
+
+//criando nova migration
+yarn sequelize migration:create --name=create-users
+
+//edit the migration
+
+//aplicar a migration ao db
+yarn sequelize db:migrate
+//desfazer ultima migration
+yarn sequelize db:migrate:undo
+//desfazer todas migrations
+yarn sequelize db:migrate:undo:all
