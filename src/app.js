@@ -4,6 +4,8 @@
 
 import express from 'express';
 import routes from './routes';
+// não é necessário o index.js
+import './database';
 
 class App {
   // constructor sempre será chamado ao se instanciar a classe
