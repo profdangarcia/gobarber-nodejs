@@ -94,3 +94,19 @@ yarn sequelize db:migrate
 yarn sequelize db:migrate:undo
 //desfazer todas migrations
 yarn sequelize db:migrate:undo:all
+
+############################# Database Connection
+//Criar novo arquivo em /src/database chamado index.js
+//Importar o index.js atraves de /src/database no app.js
+
+#####################Hash de senha
+//Após criar o User controller store() para criar usuários
+//Alterar o model para criptografar a senha fornecida
+//Instalação de novo módulo bcryptjs
+yarn add bcryptjs
+
+###################### Autenticação JWT - JSON WEB TOKEN
+//novo controlador para sessões
+//nova dependencia instalada
+yarn add jsonwebtoken
+//novo arquivo em src/config chamado auth.js para ser usado no controller
