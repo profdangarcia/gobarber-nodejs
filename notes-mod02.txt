@@ -110,3 +110,9 @@ yarn add bcryptjs
 //nova dependencia instalada
 yarn add jsonwebtoken
 //novo arquivo em src/config chamado auth.js para ser usado no controller
+
+####################### MIddlewares de Autenticação
+//nova pasta em src/app chamada middlewares
+//novo arquivo em middlewares auth.js
+//alterações em route.js para utilizar o middleware
+//nova rota para update que irá passar pelo middleware
