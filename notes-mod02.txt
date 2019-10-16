@@ -42,7 +42,7 @@ yarn add sucrase nodemon -D
  ########## Ferramentas para padronização de código
  //Instalar ESLint no VsCode
  //Instalar eslint no projeto
- yarn add eslint
+ yarn add eslint -D
  //Inicializar eslint e responder as perguntas
  yarn eslint --init
  //Excluir arquivo package.json criado pelo npm
@@ -58,6 +58,8 @@ yarn add sucrase nodemon -D
  
  //Criar o arquivo .prettierrc para sobrescrever configurações padrão
  
+//Corrigir todas as formatações de uma pasta especifica com extensoes especificas com eslint
+yarn eslint --fix src --ext .js
  
  ####################### Organização das pastas
  
