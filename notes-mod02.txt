@@ -116,3 +116,7 @@ yarn add jsonwebtoken
 //novo arquivo em middlewares auth.js
 //alterações em route.js para utilizar o middleware
 //nova rota para update que irá passar pelo middleware
+
+######################### Validação dados de entrada
+//nova dependencia yup
+yarn add yup
