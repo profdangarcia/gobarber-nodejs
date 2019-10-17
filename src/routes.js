@@ -6,6 +6,7 @@ import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
 import FileController from './app/controllers/FileController';
 import ProviderController from './app/controllers/ProviderController';
+import AppointmentController from './app/controllers/AppointmentController';
 
 import authMiddleware from './app/middlewares/auth';
 
@@ -17,6 +18,7 @@ routes.post('/sessions', SessionController.store);
 
 // middleware global para todas as rotas subsequentes
 routes.use(authMiddleware);
+
 routes.put('/users', UserController.update);
 
 // a requisição será enviada no campo file definida abaixo
@@ -24,6 +26,9 @@ routes.post('/files', upload.single('file'), FileController.store);
 
 // rota listar prestadores de serviço
 routes.get('/providers', ProviderController.index);
+
+// rota cadastrar um agendamento
+routes.post('/appointments', AppointmentController.store);
 
 // module.exports = routes;
 export default routes;
