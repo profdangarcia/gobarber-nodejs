@@ -1,3 +1,23 @@
 ################ UPLOAD DE ARQUIVOS 
 //instalar a dependencia para lidar com multipart form data (multer)
 yarn add multer
+//criar na raiz do projeto uma pasta temp e dentro dela uma pasta uploads
+// criar novo arquivo chamado multer.js na pasta src/config
+// configurar o multer.js
+
+//importar o multer nas rotas
+//editar arquivo de rotas
+
+//criar um controlador para os arquivos
+//criar nova migration para os arquivos e aplicar as migrations criadas
+//criar novo model para os arquivos
+//editar arquivo index.js em src/database para adicionar o model
+
+//criar nova migration para adicionar campo de relacionamento na tabela de usuarios
+yarn sequelize migration:create --name=add-avatar-field-to-users
+//aplicar o migrate
+yarn sequelize db:migrate
+
+//alteração no modelo de usuário para relacionar com a tabela de arquivos
+
+//alterar novamente arquivo index.js em src/database para utilizar o metodo associate

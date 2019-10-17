@@ -4,6 +4,8 @@ import multer from 'multer';
 import multerConfig from './config/multer';
 import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
+import FileController from './app/controllers/FileController';
+import ProviderController from './app/controllers/ProviderController';
 
 import authMiddleware from './app/middlewares/auth';
 
@@ -17,10 +19,11 @@ routes.post('/sessions', SessionController.store);
 routes.use(authMiddleware);
 routes.put('/users', UserController.update);
 
-// a requisição será enviada no campo file
-routes.post('/files', upload.single('file'), (req, res) => {
-  return res.json({ ok: true });
-});
+// a requisição será enviada no campo file definida abaixo
+routes.post('/files', upload.single('file'), FileController.store);
+
+// rota listar prestadores de serviço
+routes.get('/providers', ProviderController.index);
 
 // module.exports = routes;
 export default routes;
