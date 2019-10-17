@@ -21,3 +21,10 @@ yarn sequelize db:migrate
 //alteração no modelo de usuário para relacionar com a tabela de arquivos
 
 //alterar novamente arquivo index.js em src/database para utilizar o metodo associate
+
+#################### LISTAGEM DE PRESTADORES DE SERVIÇO
+
+//Novo controller
+//Alteração no model de usuarios para adicionar apelido ao campo File
+//Nova alteração no Model File para incluir campo virtual
+//alteração em app.js para servir arquivos estaticos com o express.static 
