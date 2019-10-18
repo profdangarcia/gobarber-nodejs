@@ -40,3 +40,9 @@ yarn sequelize migration:create --name=create-appointments
 //instalar nova dependencia date-fns em sua ultima versão
 yarn add date-fns@next
 //realizar verificações
+
+################## Listagem dos agendamentos de usuário
+// criação no controlador do método index
+
+################ Agendamentos do Prestador de serviços
+// novo controller ScheduleController

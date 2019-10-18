@@ -7,6 +7,7 @@ import SessionController from './app/controllers/SessionController';
 import FileController from './app/controllers/FileController';
 import ProviderController from './app/controllers/ProviderController';
 import AppointmentController from './app/controllers/AppointmentController';
+import ScheduleController from './app/controllers/ScheduleController';
 
 import authMiddleware from './app/middlewares/auth';
 
@@ -27,9 +28,12 @@ routes.post('/files', upload.single('file'), FileController.store);
 // rota listar prestadores de serviço
 routes.get('/providers', ProviderController.index);
 
-// rota cadastrar um agendamento
+// rota cadastrar um agendamentos e listar agendamentos de usuarios
 routes.post('/appointments', AppointmentController.store);
 routes.get('/appointments', AppointmentController.index);
+
+// rota para listar agenda do prestador de serviços
+routes.get('/schedule', ScheduleController.index);
 
 // module.exports = routes;
 export default routes;
