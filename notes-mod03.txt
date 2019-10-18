@@ -46,3 +46,12 @@ yarn add date-fns@next
 
 ################ Agendamentos do Prestador de serviços
 // novo controller ScheduleController
+
+################ Configurando MongoDB
+//baixar imagem do mongo(se necessário)
+docker pull mongo 
+//criar novo cluster no docker
+docker run --name mongobarber -p 27017:27017 -d -t mongo
+//adicionar dependencia do mongoose
+yarn add mongoose
+//realizar configurações no index.js dentro de src/database 
