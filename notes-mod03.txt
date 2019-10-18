@@ -32,3 +32,11 @@ yarn sequelize db:migrate
 ################## MIGRATION E MODEL AGENDAMENTOS
 //criar nova migration
 yarn sequelize migration:create --name=create-appointments
+
+################# REALIZAÇÃO DE AGENDAMENTOS
+//criar o controlador de agendamentos e realizar configurações
+
+################## Validações de DATA nos AGENDAMENTOS
+//instalar nova dependencia date-fns em sua ultima versão
+yarn add date-fns@next
+//realizar verificações

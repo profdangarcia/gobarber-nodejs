@@ -29,6 +29,7 @@ routes.get('/providers', ProviderController.index);
 
 // rota cadastrar um agendamento
 routes.post('/appointments', AppointmentController.store);
+routes.get('/appointments', AppointmentController.index);
 
 // module.exports = routes;
 export default routes;
