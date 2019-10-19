@@ -54,4 +54,10 @@ docker pull mongo
 docker run --name mongobarber -p 27017:27017 -d -t mongo
 //adicionar dependencia do mongoose
 yarn add mongoose
-//realizar configurações no index.js dentro de src/database 
+//realizar configurações no index.js dentro de src/database
+
+################# Schema de Notificações
+//nova pasta chamada schemas na pasta src/app
+//criar o novo schema
+//importar novo schema no controlador de Appointments
+//realizar configurações, novas importações do datefns
