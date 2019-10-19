@@ -32,6 +32,7 @@ routes.get('/providers', ProviderController.index);
 // rota cadastrar um agendamentos e listar agendamentos de usuarios
 routes.post('/appointments', AppointmentController.store);
 routes.get('/appointments', AppointmentController.index);
+routes.delete('/appointments/:id', AppointmentController.delete);
 
 // rota para listar agenda do prestador de serviços
 routes.get('/schedule', ScheduleController.index);
