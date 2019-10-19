@@ -65,3 +65,17 @@ yarn add mongoose
 ###################### Listagem de notificações
 //nova rota para listagem
 //novo controlador para Notificações
+
+##################### Cancelamento de notificações
+//nova rota para delete
+//novo método no controlador de appointments
+
+##################### Configurações Envio de E-mail
+// nova dependencia - Nodemailer
+yarn add nodemailer
+//novo arquivo na pasta config chamado mail.js
+//configurações de Mailtrap(para desenvolvimento)
+https://mailtrap.io << página
+//nova pasta em /src chamada lib
+//novo arquivo em /src/lib chamado Mail.js
+//alterações no appointmentController
