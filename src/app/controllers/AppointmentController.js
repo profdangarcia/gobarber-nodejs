@@ -4,7 +4,7 @@ import pt from 'date-fns/locale/pt';
 import Appointment from '../models/Appointment';
 import User from '../models/User';
 import File from '../models/File';
-import Notification from '../schemas/Notifications';
+import Notification from '../schemas/Notification';
 
 class AppointmentController {
   async index(req, res) {
@@ -64,6 +64,10 @@ class AppointmentController {
       return res
         .status(401)
         .json({ error: 'Appointments only with providers!' });
+    }
+    // check if the user is not appointing with himself
+    if (provider_id === req.userId) {
+      return res.status(401).json({ error: 'Cannot appoint with urself' });
     }
     /**
      * check past date
