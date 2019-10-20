@@ -92,3 +92,15 @@ yarn add express-handlebars nodemailer-express-handlebars
 // configurações do email de cancelamento no arquivo cancellation.hbs
 // configurações do método delete no AppointmentController
 
+#################### Configurações de Filas (REDIS)
+// nova instalação no docker
+docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
+//nova dependencia bee-queue
+yarn add bee-queue
+//novo arquivo Queue.js em src/libs
+//nova pasta em src/app/jobs
+//novo arquivo em src/app/jobs chamado CancellationMail.js
+//novo arquivo em src/config chamado redis.js
+//alterações do método delete no AppointmentController
+//novo arquivo em /src chamado queue.js
+//novo script no packet.json para rodar a queue separada do servidor, rodar com o comando 'yarn queue'
