@@ -79,3 +79,7 @@ https://mailtrap.io << página
 //nova pasta em /src chamada lib
 //novo arquivo em /src/lib chamado Mail.js
 //alterações no appointmentController
+
+########################## Templates de E-mail
+//duas novas dependencias
+yarn add express-handlebars nodemailer-express-handlebars
