@@ -83,3 +83,12 @@ https://mailtrap.io << página
 ########################## Templates de E-mail
 //duas novas dependencias
 yarn add express-handlebars nodemailer-express-handlebars
+//configurações e altereções no arquivo Mail.js em lib
+//novas pastas em app:  src/app/views  src/app/views/emails  src/app/views/emails/layouts
+// src/app/views/emails/partials
+// novo arquivo em src/app/views/emails chamado cancellation.hbs
+// novo arquivo em src/app/views/emails/layouts chamado default.hbs
+// novo arquivo em src/app/views/emails/partials chamado footer.hbs
+// configurações do email de cancelamento no arquivo cancellation.hbs
+// configurações do método delete no AppointmentController
+
