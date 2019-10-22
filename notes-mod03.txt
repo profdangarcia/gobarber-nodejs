@@ -104,3 +104,12 @@ yarn add bee-queue
 //alterações do método delete no AppointmentController
 //novo arquivo em /src chamado queue.js
 //novo script no packet.json para rodar a queue separada do servidor, rodar com o comando 'yarn queue'
+
+
+####################### Checando horários disponíveis
+// nova rota 
+// novo controlador AvailableController
+
+####################### Campos virtuais nos agendamentos
+// alteração do model de Appointment
+// alteração no INDEX do AppointmentController para retornar os novos campos
