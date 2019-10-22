@@ -9,6 +9,7 @@ import ProviderController from './app/controllers/ProviderController';
 import AppointmentController from './app/controllers/AppointmentController';
 import ScheduleController from './app/controllers/ScheduleController';
 import NotificationController from './app/controllers/NotificationController';
+import AvailableController from './app/controllers/AvailableController';
 
 import authMiddleware from './app/middlewares/auth';
 
@@ -28,6 +29,7 @@ routes.post('/files', upload.single('file'), FileController.store);
 
 // rota listar prestadores de serviço
 routes.get('/providers', ProviderController.index);
+routes.get('/providers/:providerId/available', AvailableController.index);
 
 // rota cadastrar um agendamentos e listar agendamentos de usuarios
 routes.post('/appointments', AppointmentController.store);
