@@ -113,3 +113,16 @@ yarn add bee-queue
 ####################### Campos virtuais nos agendamentos
 // alteração do model de Appointment
 // alteração no INDEX do AppointmentController para retornar os novos campos
+
+###################### Tratando Exceções
+// utilização do Sentry (sentry.io)
+// cadastrar ou fazer login, criar projeto (no caso um projeto em express)
+// utilizar as instruções para adicionar dependencia
+yarn add @sentry/node@5.7.1
+// alterações no arquivo app.js da pasta /src
+// novo arquivo na pasta src/config chamado sentry.js
+// nova dependencia EXPRESS-ASYNC-ERRORS
+yarn add express-async-errors
+// novo middleware em app.js
+// nova dependencia YOUCH
+yarn add youch
