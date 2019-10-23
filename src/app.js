@@ -1,7 +1,7 @@
 // SEM O SUCRASE
 // const express = require('express');
 // const routes = require('./routes');
-
+import 'dotenv/config'; // variaveis globais no formato: process.env.<variavel>
 import express from 'express';
 import path from 'path';
 import Youch from 'youch';
@@ -43,9 +43,11 @@ class App {
 
   exceptionHandler() {
     this.server.use(async (err, req, res, next) => {
-      const errors = await new Youch(err, req).toJSON();
-
-      return res.status(500).json(errors);
+      if (process.env.NODE_ENV === 'development') {
+        const errors = await new Youch(err, req).toJSON();
+        return res.status(500).json(errors);
+      }
+      return res.status(500).json({ error: 'internal server error' });
     });
   }
 }

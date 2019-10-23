@@ -126,3 +126,22 @@ yarn add express-async-errors
 // novo middleware em app.js
 // nova dependencia YOUCH
 yarn add youch
+
+##################### Variáveis de ambiente
+// novo arquivo em raiz chamado .env
+// adicionar o arquivo ao gitignore
+// nova dependencia dotenv
+// importar dotenv em app.js
+// importar dotenv em queue.js
+// importar dotenv em /src/config/database.js
+
+##################### Utilizando variáveis de ambiente
+// primeiro em src/app/models/File.js
+// condição para retorno dos erros em exceptionHandler() em app.js
+// agora em src/config/auth.js
+// postgres em src/config/database.js
+// mongo em src/database/index.js
+// redis em src/config/redis.js
+// email em src/config/mail.js
+// sentry em src/config/sentry.js
+// criar arquivo na raiz .env.example sem as informações sensíveis
