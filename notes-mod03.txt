@@ -145,3 +145,9 @@ yarn add youch
 // email em src/config/mail.js
 // sentry em src/config/sentry.js
 // criar arquivo na raiz .env.example sem as informações sensíveis
+
+######################## Ajustes na API para necessidades do Front
+// nova dependencia cors para permitir acesso externo
+yarn add cors
+// inclusao do cors nos middlewares do app.js
+// alteração nos controllers de Users (update), session (create), scheduller(create)
